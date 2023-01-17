@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>New Game</h1>
+  <div class="row">
+    <div class="col-1"></div>
+    <% @letters.each do |letter| %>
+      <div class="col-1 cell"><%= letter.upcase %></div>
+    <% end %>
+    <div class="col-1"></div>
+  </div>
+
+  <div class="justify-content-center">
+  <p>What is the longest word you can find?</p>
+    <form action="/score" method="POST" data-turbo="false">
+      <!-- ... -->
+      <input type="text">
+      <input id="member" name="guess" type="text" value="<%= params[:guess] %>" placeholder="Your Guess">
+      <input type="submit">
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    </form>
+  </div>
+</div>
