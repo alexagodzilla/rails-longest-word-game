@@ -1,0 +1,19 @@
+.col-1 {
+  height:48px;
+  width:48px;
+}
+
+.cell {
+  background-color: #3498DC;
+  border: 1px solid black;
+  color: white;
+  font-weight: bold;
+  box-shadow: 2px 4px 3px grey;
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.letters {
+  top:5px;
+}
